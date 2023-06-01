@@ -9,21 +9,47 @@
 /* Begin PBXBuildFile section */
 		BA802DFC2A285DAD00938B54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA802DFB2A285DAD00938B54 /* AppDelegate.swift */; };
 		BA802DFE2A285DAD00938B54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA802DFD2A285DAD00938B54 /* SceneDelegate.swift */; };
-		BA802E002A285DAD00938B54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA802DFF2A285DAD00938B54 /* ViewController.swift */; };
-		BA802E032A285DAD00938B54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA802E012A285DAD00938B54 /* Main.storyboard */; };
 		BA802E052A285DAF00938B54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA802E042A285DAF00938B54 /* Assets.xcassets */; };
 		BA802E082A285DAF00938B54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA802E062A285DAF00938B54 /* LaunchScreen.storyboard */; };
+		BA802E1A2A285EB300938B54 /* TracksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA802E192A285EB300938B54 /* TracksTableViewController.swift */; };
+		BA802E1C2A285ED900938B54 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA802E1B2A285ED900938B54 /* TrackTableViewCell.swift */; };
+		BA802E1E2A285EE700938B54 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA802E1D2A285EE700938B54 /* Track.swift */; };
+		BA802E212A2869C400938B54 /* Tracks.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA802E202A2869C300938B54 /* Tracks.xcassets */; };
+		BA802E272A2869F700938B54 /* Track4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA802E222A2869F700938B54 /* Track4.mp3 */; };
+		BA802E282A2869F700938B54 /* Track2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA802E232A2869F700938B54 /* Track2.mp3 */; };
+		BA802E292A2869F700938B54 /* Track1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA802E242A2869F700938B54 /* Track1.mp3 */; };
+		BA802E2A2A2869F700938B54 /* Track5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA802E252A2869F700938B54 /* Track5.mp3 */; };
+		BA802E2B2A2869F700938B54 /* Track3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA802E262A2869F700938B54 /* Track3.mp3 */; };
+		BA802E2D2A286F9800938B54 /* PlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA802E2C2A286F9800938B54 /* PlayingViewController.swift */; };
+		BA802E2F2A28711500938B54 /* PlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA802E2E2A28711500938B54 /* PlayingView.swift */; };
+		BA802E322A28738500938B54 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA802E312A28738500938B54 /* UIButton+.swift */; };
+		BA802E342A287A4500938B54 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA802E332A287A4500938B54 /* UIView+.swift */; };
+		BA802E362A287E2300938B54 /* TrackParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA802E352A287E2300938B54 /* TrackParameters.swift */; };
+		BA802E382A28842900938B54 /* PlayingViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA802E372A28842900938B54 /* PlayingViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BA802DF82A285DAD00938B54 /* SurfIT Test Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SurfIT Test Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA802DFB2A285DAD00938B54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA802DFD2A285DAD00938B54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BA802DFF2A285DAD00938B54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BA802E022A285DAD00938B54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA802E042A285DAF00938B54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA802E072A285DAF00938B54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA802E092A285DAF00938B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA802E192A285EB300938B54 /* TracksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksTableViewController.swift; sourceTree = "<group>"; };
+		BA802E1B2A285ED900938B54 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
+		BA802E1D2A285EE700938B54 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		BA802E202A2869C300938B54 /* Tracks.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Tracks.xcassets; sourceTree = "<group>"; };
+		BA802E222A2869F700938B54 /* Track4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Track4.mp3; sourceTree = "<group>"; };
+		BA802E232A2869F700938B54 /* Track2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Track2.mp3; sourceTree = "<group>"; };
+		BA802E242A2869F700938B54 /* Track1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Track1.mp3; sourceTree = "<group>"; };
+		BA802E252A2869F700938B54 /* Track5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Track5.mp3; sourceTree = "<group>"; };
+		BA802E262A2869F700938B54 /* Track3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Track3.mp3; sourceTree = "<group>"; };
+		BA802E2C2A286F9800938B54 /* PlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingViewController.swift; sourceTree = "<group>"; };
+		BA802E2E2A28711500938B54 /* PlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingView.swift; sourceTree = "<group>"; };
+		BA802E312A28738500938B54 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		BA802E332A287A4500938B54 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		BA802E352A287E2300938B54 /* TrackParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackParameters.swift; sourceTree = "<group>"; };
+		BA802E372A28842900938B54 /* PlayingViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +82,108 @@
 		BA802DFA2A285DAD00938B54 /* SurfIT Test Task */ = {
 			isa = PBXGroup;
 			children = (
+				BA802E302A28737900938B54 /* Extensions */,
+				BA802E0F2A285E2300938B54 /* Modules */,
 				BA802DFB2A285DAD00938B54 /* AppDelegate.swift */,
 				BA802DFD2A285DAD00938B54 /* SceneDelegate.swift */,
-				BA802DFF2A285DAD00938B54 /* ViewController.swift */,
-				BA802E012A285DAD00938B54 /* Main.storyboard */,
 				BA802E042A285DAF00938B54 /* Assets.xcassets */,
 				BA802E062A285DAF00938B54 /* LaunchScreen.storyboard */,
 				BA802E092A285DAF00938B54 /* Info.plist */,
+				BA802E202A2869C300938B54 /* Tracks.xcassets */,
+				BA802E242A2869F700938B54 /* Track1.mp3 */,
+				BA802E232A2869F700938B54 /* Track2.mp3 */,
+				BA802E262A2869F700938B54 /* Track3.mp3 */,
+				BA802E222A2869F700938B54 /* Track4.mp3 */,
+				BA802E252A2869F700938B54 /* Track5.mp3 */,
 			);
 			path = "SurfIT Test Task";
+			sourceTree = "<group>";
+		};
+		BA802E0F2A285E2300938B54 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				BA802E112A285E4000938B54 /* PlayingModule */,
+				BA802E102A285E2D00938B54 /* TracksTableModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		BA802E102A285E2D00938B54 /* TracksTableModule */ = {
+			isa = PBXGroup;
+			children = (
+				BA802E142A285E6000938B54 /* Controller */,
+				BA802E132A285E5A00938B54 /* View */,
+				BA802E122A285E5400938B54 /* Model */,
+			);
+			path = TracksTableModule;
+			sourceTree = "<group>";
+		};
+		BA802E112A285E4000938B54 /* PlayingModule */ = {
+			isa = PBXGroup;
+			children = (
+				BA802E182A285E8500938B54 /* Controller */,
+				BA802E162A285E7400938B54 /* View */,
+				BA802E152A285E6A00938B54 /* Model */,
+			);
+			path = PlayingModule;
+			sourceTree = "<group>";
+		};
+		BA802E122A285E5400938B54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA802E1D2A285EE700938B54 /* Track.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA802E132A285E5A00938B54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA802E1B2A285ED900938B54 /* TrackTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BA802E142A285E6000938B54 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA802E192A285EB300938B54 /* TracksTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BA802E152A285E6A00938B54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA802E352A287E2300938B54 /* TrackParameters.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA802E162A285E7400938B54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA802E2E2A28711500938B54 /* PlayingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BA802E182A285E8500938B54 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA802E2C2A286F9800938B54 /* PlayingViewController.swift */,
+				BA802E372A28842900938B54 /* PlayingViewControllerDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BA802E302A28737900938B54 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BA802E312A28738500938B54 /* UIButton+.swift */,
+				BA802E332A287A4500938B54 /* UIView+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +244,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA802E272A2869F700938B54 /* Track4.mp3 in Resources */,
 				BA802E082A285DAF00938B54 /* LaunchScreen.storyboard in Resources */,
+				BA802E292A2869F700938B54 /* Track1.mp3 in Resources */,
+				BA802E2B2A2869F700938B54 /* Track3.mp3 in Resources */,
+				BA802E212A2869C400938B54 /* Tracks.xcassets in Resources */,
 				BA802E052A285DAF00938B54 /* Assets.xcassets in Resources */,
-				BA802E032A285DAD00938B54 /* Main.storyboard in Resources */,
+				BA802E2A2A2869F700938B54 /* Track5.mp3 in Resources */,
+				BA802E282A2869F700938B54 /* Track2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +262,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA802E002A285DAD00938B54 /* ViewController.swift in Sources */,
+				BA802E1C2A285ED900938B54 /* TrackTableViewCell.swift in Sources */,
+				BA802E1A2A285EB300938B54 /* TracksTableViewController.swift in Sources */,
+				BA802E2F2A28711500938B54 /* PlayingView.swift in Sources */,
+				BA802E342A287A4500938B54 /* UIView+.swift in Sources */,
+				BA802E322A28738500938B54 /* UIButton+.swift in Sources */,
+				BA802E1E2A285EE700938B54 /* Track.swift in Sources */,
 				BA802DFC2A285DAD00938B54 /* AppDelegate.swift in Sources */,
 				BA802DFE2A285DAD00938B54 /* SceneDelegate.swift in Sources */,
+				BA802E362A287E2300938B54 /* TrackParameters.swift in Sources */,
+				BA802E382A28842900938B54 /* PlayingViewControllerDelegate.swift in Sources */,
+				BA802E2D2A286F9800938B54 /* PlayingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BA802E012A285DAD00938B54 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BA802E022A285DAD00938B54 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BA802E062A285DAF00938B54 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +416,6 @@
 				INFOPLIST_FILE = "SurfIT Test Task/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +443,6 @@
 				INFOPLIST_FILE = "SurfIT Test Task/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
