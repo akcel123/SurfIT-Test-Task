@@ -13,6 +13,9 @@ final class PlayingViewController: UIViewController {
     private var trackParameters: TrackParameters
     let player = AudioPlayer.shared
     private var playingView: PlayingViewProtocol!
+    // две переменные ниже необходимы для устанения бага, связанного с возвращением слайдера на мгновение после ручного перемещения
+    private var sliderValue = 0
+    private var isPeriodicUpdate = true
     
     // MARK: - life cycle
     
@@ -59,8 +62,16 @@ private extension PlayingViewController {
     }
     
     func setupPlayer() {
-        player.player.addPeriodicTimeObserver(forInterval: CMTime(seconds: 1, preferredTimescale: 1000), queue: .main) { [weak self] time in
-            self?.playingView.setCurrentTime(Int(time.seconds))
+        player.player.addPeriodicTimeObserver(forInterval: CMTime(seconds: 1, preferredTimescale: 1), queue: .main) { [weak self] time in
+            if self?.sliderValue == Int(time.seconds) {
+                self?.isPeriodicUpdate = true
+            }
+            
+            if self?.isPeriodicUpdate == true {
+                self?.playingView.setCurrentTime(Int(time.seconds))
+            }
+            
+            
             if time.seconds > 1.0 {
                 if Int(time.seconds) == Int(self?.player.player.currentItem?.duration.seconds ?? 0)  {
                     self?.nextButtonDidTapped()
@@ -104,9 +115,17 @@ extension PlayingViewController: PlayingViewControllerDelegate {
         dismiss(animated: true)
     }
     
-    func sliderValueChanged(_ newValue: Int) {
+
+    
+    func sliderTouchUpInside(_ newValue: Int) {
         player.player.seek(to: CMTime(seconds: Double(newValue), preferredTimescale: 1000))
-        playingView.setCurrentTime(newValue)
+        sliderValue = newValue
+        isPeriodicUpdate = false
+        
     }
+    
+
+
+    
     
 }

@@ -48,6 +48,8 @@ class AudioPlayer {
         player.pause()
         if currentNumberOfTrack != 0 {
             currentNumberOfTrack -= 1
+        } else {
+            player.seek(to: CMTime(seconds: 0.0, preferredTimescale: 1000))
         }
         player.play()
     }

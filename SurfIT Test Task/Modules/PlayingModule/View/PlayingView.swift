@@ -45,8 +45,10 @@ final class PlayingView: UIView {
         //FIXME: необходимо изменить слайдер, чтобы в нормальном состоянии было маленькое изображение, а в состоянии нажатия - большое
         // либо попробовать реализовать как на референсе, вообще без thumb
         let slider = UISlider()
+        
         slider.translatesAutoresizingMaskIntoConstraints = false
-        slider.addTarget(self, action: #selector(sliderValueChanged), for: .touchUpInside)
+        slider.addTarget(self, action: #selector(sliderTouchUpInside), for: .touchUpInside)
+
         return slider
     }()
     
@@ -54,7 +56,7 @@ final class PlayingView: UIView {
     private lazy var playButton = UIButton().createButtonForPlayingModule(systemImageName: "play", target: self, action: #selector(playButtonDidTapped))
     private lazy var nextTrackButton = UIButton().createButtonForPlayingModule(systemImageName: "forward.end", target: self, action: #selector(nextButtonDidTapped))
     
-    private lazy var closeButton = UIButton().createButtonForPlayingModule(systemImageName: "cross", title: "Close", target: self, action: #selector(closeButtonDidTapped))
+    private lazy var closeButton = UIButton().createButtonForPlayingModule(systemImageName: "xmark", title: "Close", target: self, action: #selector(closeButtonDidTapped))
     
     //MARK: - Initializer
     
@@ -75,6 +77,7 @@ final class PlayingView: UIView {
 
 //MARK: - PlayingViewProtocol
 extension PlayingView: PlayingViewProtocol {
+    
     func setupTrackParameters(_ parameters: TrackParameters) {
         trackNameLabel.text = parameters.name
         artistNameLabel.text = parameters.artistName
@@ -84,10 +87,12 @@ extension PlayingView: PlayingViewProtocol {
     
     func setCurrentTime(_ timeInSeconds: Int) {
         currentTimeLabel.text = timeInSeconds.toTime()
-        if !trackSlider.isTracking {
-            trackSlider.value = Float(timeInSeconds)
+        if trackSlider.isTouchInside {
+            return
         }
+        trackSlider.value = Float(timeInSeconds)
     }
+    
     
     func pauseTrack() {
         let image = UIImage(systemName: "play")!
@@ -98,6 +103,7 @@ extension PlayingView: PlayingViewProtocol {
         let image = UIImage(systemName: "pause")!
         playButton.setImage(image, for: .normal)
     }
+    
 }
 
 
@@ -121,8 +127,8 @@ extension PlayingView {
         delegate?.closeButtonDidTapped()
     }
     
-    @objc private func sliderValueChanged() {
-        delegate?.sliderValueChanged(Int(trackSlider.value))
+    @objc private func sliderTouchUpInside() {
+        delegate?.sliderTouchUpInside(Int(trackSlider.value))
     }
 
 }
