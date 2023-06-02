@@ -22,11 +22,17 @@ class AudioPlayer {
 
     private init() {}
 
-    lazy var player: AVPlayer = AVPlayer(url: AudioPlayer.shared.tracks[currentNumberOfTrack].url)
+    lazy var player: AVPlayer = {
+        let player = AVPlayer(url: AudioPlayer.shared.tracks[currentNumberOfTrack].url)
+        player.currentItem?.allowedAudioSpatializationFormats = .multichannel
+        return player
+    }()
+    
     private var currentNumberOfTrack = 0 {
         willSet {
             if newValue != currentNumberOfTrack {
                 player.replaceCurrentItem(with: AVPlayerItem(url: AudioPlayer.shared.tracks[newValue].url))
+                player.currentItem?.allowedAudioSpatializationFormats = .monoAndStereo
             }
             
         }
