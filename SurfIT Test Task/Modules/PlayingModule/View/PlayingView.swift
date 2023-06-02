@@ -13,6 +13,7 @@ final class PlayingView: UIView {
     weak var delegate: PlayingViewControllerDelegate?
     
     //MARK: - View elements properties
+    
     private let trackNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -40,11 +41,12 @@ final class PlayingView: UIView {
         return label
     }()
     
-    private let trackSlider: UISlider = {
+    private lazy var trackSlider: UISlider = {
+        //FIXME: необходимо изменить слайдер, чтобы в нормальном состоянии было маленькое изображение, а в состоянии нажатия - большое
+        // либо попробовать реализовать как на референсе, вообще без thumb
         let slider = UISlider()
         slider.translatesAutoresizingMaskIntoConstraints = false
-        slider.thumbTintColor = .clear
-        
+        slider.addTarget(self, action: #selector(sliderValueChanged), for: .touchUpInside)
         return slider
     }()
     
@@ -71,23 +73,58 @@ final class PlayingView: UIView {
     
 }
 
-//MARK: - buttons actions
+//MARK: - PlayingViewProtocol
+extension PlayingView: PlayingViewProtocol {
+    func setupTrackParameters(_ parameters: TrackParameters) {
+        trackNameLabel.text = parameters.name
+        artistNameLabel.text = parameters.artistName
+        endTimeLabel.text = parameters.timeInSeconds.toTime()
+        trackSlider.maximumValue = Float(parameters.timeInSeconds)
+    }
+    
+    func setCurrentTime(_ timeInSeconds: Int) {
+        currentTimeLabel.text = timeInSeconds.toTime()
+        if !trackSlider.isTracking {
+            trackSlider.value = Float(timeInSeconds)
+        }
+    }
+    
+    func pauseTrack() {
+        let image = UIImage(systemName: "play")!
+        playButton.setImage(image, for: .normal)
+    }
+    
+    func playTrack() {
+        let image = UIImage(systemName: "pause")!
+        playButton.setImage(image, for: .normal)
+    }
+}
+
+
+
+
+//MARK: - buttons and slider actions
 extension PlayingView {
-    @objc func previousButtonDidTapped() {
+    @objc private func previousButtonDidTapped() {
         delegate?.previousButtonDidTapped()
     }
     
-    @objc func playButtonDidTapped() {
+    @objc private func playButtonDidTapped() {
         delegate?.playButtonDidTapped()
     }
     
-    @objc func nextButtonDidTapped() {
+    @objc private func nextButtonDidTapped() {
         delegate?.nextButtonDidTapped()
     }
     
-    @objc func closeButtonDidTapped() {
+    @objc private func closeButtonDidTapped() {
         delegate?.closeButtonDidTapped()
     }
+    
+    @objc private func sliderValueChanged() {
+        delegate?.sliderValueChanged(Int(trackSlider.value))
+    }
+
 }
 
 //MARK: - setup Views
@@ -137,15 +174,3 @@ private extension PlayingView {
     }
 }
 
-//MARK: - Change View Properties
-extension PlayingView {
-    private func setupTrackParameters(_ parameters: TrackParameters) {
-        trackNameLabel.text = parameters.name
-        artistNameLabel.text = parameters.artistName
-        endTimeLabel.text = parameters.time
-    }
-    
-    public func setCurrentTime(_ time: String) {
-        currentTimeLabel.text = time
-    }
-}

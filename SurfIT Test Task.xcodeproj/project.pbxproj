@@ -26,6 +26,9 @@
 		BA802E342A287A4500938B54 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA802E332A287A4500938B54 /* UIView+.swift */; };
 		BA802E362A287E2300938B54 /* TrackParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA802E352A287E2300938B54 /* TrackParameters.swift */; };
 		BA802E382A28842900938B54 /* PlayingViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA802E372A28842900938B54 /* PlayingViewControllerDelegate.swift */; };
+		BA802E3B2A28B2C100938B54 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA802E3A2A28B2C100938B54 /* AudioPlayer.swift */; };
+		BA802E3D2A28BA0900938B54 /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA802E3C2A28BA0900938B54 /* Int+.swift */; };
+		BA802E3F2A29B8EC00938B54 /* PlayingViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA802E3E2A29B8EC00938B54 /* PlayingViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		BA802E332A287A4500938B54 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		BA802E352A287E2300938B54 /* TrackParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackParameters.swift; sourceTree = "<group>"; };
 		BA802E372A28842900938B54 /* PlayingViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingViewControllerDelegate.swift; sourceTree = "<group>"; };
+		BA802E3A2A28B2C100938B54 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		BA802E3C2A28BA0900938B54 /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
+		BA802E3E2A29B8EC00938B54 /* PlayingViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,7 @@
 		BA802DFA2A285DAD00938B54 /* SurfIT Test Task */ = {
 			isa = PBXGroup;
 			children = (
+				BA802E392A28B2B200938B54 /* Services */,
 				BA802E302A28737900938B54 /* Extensions */,
 				BA802E0F2A285E2300938B54 /* Modules */,
 				BA802DFB2A285DAD00938B54 /* AppDelegate.swift */,
@@ -163,6 +170,7 @@
 		BA802E162A285E7400938B54 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BA802E3E2A29B8EC00938B54 /* PlayingViewProtocol.swift */,
 				BA802E2E2A28711500938B54 /* PlayingView.swift */,
 			);
 			path = View;
@@ -182,8 +190,17 @@
 			children = (
 				BA802E312A28738500938B54 /* UIButton+.swift */,
 				BA802E332A287A4500938B54 /* UIView+.swift */,
+				BA802E3C2A28BA0900938B54 /* Int+.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BA802E392A28B2B200938B54 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BA802E3A2A28B2C100938B54 /* AudioPlayer.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +280,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA802E1C2A285ED900938B54 /* TrackTableViewCell.swift in Sources */,
+				BA802E3F2A29B8EC00938B54 /* PlayingViewProtocol.swift in Sources */,
 				BA802E1A2A285EB300938B54 /* TracksTableViewController.swift in Sources */,
+				BA802E3D2A28BA0900938B54 /* Int+.swift in Sources */,
 				BA802E2F2A28711500938B54 /* PlayingView.swift in Sources */,
 				BA802E342A287A4500938B54 /* UIView+.swift in Sources */,
 				BA802E322A28738500938B54 /* UIButton+.swift in Sources */,
@@ -273,6 +292,7 @@
 				BA802E362A287E2300938B54 /* TrackParameters.swift in Sources */,
 				BA802E382A28842900938B54 /* PlayingViewControllerDelegate.swift in Sources */,
 				BA802E2D2A286F9800938B54 /* PlayingViewController.swift in Sources */,
+				BA802E3B2A28B2C100938B54 /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

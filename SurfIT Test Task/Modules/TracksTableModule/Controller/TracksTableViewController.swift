@@ -63,16 +63,16 @@ extension TracksTableViewController: UITableViewDelegate, UITableViewDataSource 
         let cell = tableView.dequeueReusableCell(withIdentifier: TrackTableViewCell.reuseIdentifier) as! TrackTableViewCell
         
         cell.setupTrackName(tracks[indexPath.row].title + " - " + tracks[indexPath.row].artist)
-        cell.setupTrackTime(tracks[indexPath.row].time)
+        cell.setupTrackTime(tracks[indexPath.row].timeInSeconds.toTime())
 
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let trackParameters = TrackParameters(name: tracks[indexPath.row].title, artistName: tracks[indexPath.row].artist, time: tracks[indexPath.row].time)
-        let playingViewController = PlayingViewController(trackParameters: trackParameters)
+        let trackParameters = TrackParameters(name: tracks[indexPath.row].title, artistName: tracks[indexPath.row].artist, timeInSeconds: tracks[indexPath.row].timeInSeconds)
         
-
+        let playingViewController = PlayingViewController(trackParameters: trackParameters)
+        playingViewController.player.setNumberOfTrack(indexPath.row)
         present(playingViewController, animated: true)
     }
     

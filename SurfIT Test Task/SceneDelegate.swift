@@ -20,15 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         
-        let tracks = [
-            Track(url: Bundle.main.url(forResource: "Track1", withExtension: "mp3")!),
-            Track(url: Bundle.main.url(forResource: "Track2", withExtension: "mp3")!),
-            Track(url: Bundle.main.url(forResource: "Track3", withExtension: "mp3")!),
-            Track(url: Bundle.main.url(forResource: "Track4", withExtension: "mp3")!),
-            Track(url: Bundle.main.url(forResource: "Track5", withExtension: "mp3")!),
-        ]
-
-        let tracksViewController = TracksTableViewController(tracks: tracks)
+        
+        let tracksViewController = TracksTableViewController(tracks: AudioPlayer.shared.tracks)
         window.rootViewController = tracksViewController
         window.makeKeyAndVisible()
         

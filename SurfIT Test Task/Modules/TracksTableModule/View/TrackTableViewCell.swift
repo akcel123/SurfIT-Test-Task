@@ -7,10 +7,6 @@
 
 import UIKit
 
-//TODO: - реализуем два лейбла вертикально с выравниванием по левому краю
-// Соответственно в верхнем будет название трека, в нижнем - имя исполнителя
-// верхний жирный, нижний обычный (возможно не с толзиной играться, а с цветом
-
 final class TrackTableViewCell: UITableViewCell {
     
     static let reuseIdentifier = "TrackTableViewCell"

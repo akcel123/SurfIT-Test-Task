@@ -10,5 +10,5 @@ import Foundation
 struct TrackParameters {
     var name: String
     var artistName: String
-    var time: String
+    var timeInSeconds: Int
 }

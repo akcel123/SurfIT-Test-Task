@@ -11,9 +11,10 @@ import AVFoundation
 
 
 class Track {
-    private let url: URL
+    let url: URL
     private var (titleString, artistString) : (String?, String?)
     private var trackTime: Int!
+    
     var title: String {
         titleString ?? url.lastPathComponent.components(separatedBy: ".")[0]
     }
@@ -22,14 +23,15 @@ class Track {
         artistString ?? "Неизвестный исполнитель"
     }
     
-    var time: String {
-        String(format: "%02i:%02i", (trackTime / 60) % 60, trackTime % 60)
+    var timeInSeconds: Int {
+        trackTime
     }
 
     init(url: URL) {
         self.url = url
         let metadata = getMetadataFromMP3(fileURL: url)
         (titleString, artistString, trackTime) = metadata
+        //FIXME: не могу адаптировать считывание метаданных под новое API, на данный момент идей нет
 //        Task {
 //            do {
 //                let metadata = try await self.getMetadata()

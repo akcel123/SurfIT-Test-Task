@@ -12,4 +12,5 @@ protocol PlayingViewControllerDelegate: AnyObject {
     func playButtonDidTapped()
     func nextButtonDidTapped()
     func closeButtonDidTapped()
+    func sliderValueChanged(_ newValue: Int)
 }
